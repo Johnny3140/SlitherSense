@@ -1,0 +1,37 @@
+//DEPENDENCIES 
+
+
+
+
+//MIDDLEWARE
+
+
+
+//ROUTES (I.N.D.U.C.E.S
+
+
+//INDEX ROUTE
+
+
+
+//NEW ROUTE
+
+
+
+//DELETE ROUTE
+
+
+
+// UPDATE ROUTE
+
+
+
+//CREATE ROUTE 
+
+
+
+// EDIT ROUTE 
+
+
+
+// SHOW ROUTE 
