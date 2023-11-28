@@ -9,11 +9,19 @@
 <body>
   <h1>SlitherSense</h1>
  <h2>List of Reptiles</h2>
-  <ul>
-    <% reptiles.forEach(reptile => { %>
-      <li><%= reptile.Name %></li>
-    <% }); %>
-  </ul>
+ <ul>
+  <% reptiles.forEach(reptile => { %>
+    <li>
+      <a href="/reptiles/<%= reptile._id %>">
+        <%= reptile.Name %>
+      </a>
+      <!-- edit button-->
+      <a href="/reptiles/<%= reptile._id %>/edit">Edit</a>
+    </li>
+  <% }); %>
+</ul>
+
+<a href="/reptiles/new"> New Reptile</a>
 
 </body>
 </html>
