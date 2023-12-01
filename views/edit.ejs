@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Reptile</title>
+</head>
+<body>
+  <h1>Edit Reptile</h1>
+
+  <form action="/reptiles/<%= reptile._id %>?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="Name" value="<%= reptile.Name %>" required>
+
+    <label for="hardiness">Hardiness:</label>
+    <input type="number" id="hardiness" name="Hardiness" value="<%= reptile.Hardiness %>" required>
+
+    <label for="tameability">Tameability:</label>
+    <input type="number" id="tameability" name="Tameability" value="<%= reptile.Tameability %>" required>
+
+    <label for="habitat">Habitat:</label>
+    <input type="text" id="habitat" name="Habitat" value="<%= reptile.Habitat %>" required>
+
+    <label for="diet">Diet:</label>
+    <input type="text" id="diet" name="Diet" value="<%= reptile.Diet %>" required>
+   
+    <label for="image">Image URL:</label>
+    <input type="text" id="image" name="Image" value="<%= reptile.Image %>" required>
+
+    <button type="submit">Update</button>
+  </form>
+
+  <a href="/reptiles">Back to Index</a>
+</body>
+</html>

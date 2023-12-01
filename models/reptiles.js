@@ -6,6 +6,7 @@ const reptileSchema = new mongoose.Schema({
   Tameability : Number,
   Habitat : String,
   Diet : String,
+  Image : String,
 });
 
 module.exports = mongoose.model('Reptile', reptileSchema);

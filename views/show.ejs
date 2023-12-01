@@ -1,25 +1,36 @@
+<!-- views/show.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Show Reptile</title>
+  <title>SlitherSense - <%= reptile.Name %></title>
+  <link rel="stylesheet" href="/styles.css"> 
 </head>
 <body>
-  <ul>
-    <% if (reptile) { %>
-      <li>
-        <h3><%= reptile.Name %></h3>
-        <p>Hardiness: <%= reptile.Hardiness %></p>
-        <p>Tameability: <%= reptile.Tameability %></p>
-        <p>Habitat: <%= reptile.Habitat %></p>
-        <p>Diet: <%= reptile.Diet %></p>
-      </li>
-    <% } else { %>
-      <li>Reptile not found</li>
-    <% } %>
-  </ul>
-   <!-- Back to Index button -->
-   <a href="/reptiles">Back to Index</a>
+  <header>
+    <h1>SlitherSense</h1>
+    <h2>Reptile Details</h2>
+  </header>
+  <div class="container">
+    <h3><%= reptile.Name %></h3>
+    <div class="image-container">
+      <img src="/img/beginners-guide-keeping-bearded-dragon.jpg" alt="<%= reptile.Name %> Image">
+    </div>
+    <p>Hardiness: <%= reptile.Hardiness %></p>
+    <p>Tameability: <%= reptile.Tameability %></p>
+    <p>Habitat: <%= reptile.Habitat %></p>
+    <p>Diet: <%= reptile.Diet %></p>
+
+    <!-- Delete Button and other buttons... -->
+
+    <form action="/reptiles/<%= reptile._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+
+    <a href="/reptiles/<%= reptile._id %>/edit">Edit</a>
+    <a href="/reptiles">Back to List</a>
+  </div>
 </body>
 </html>
