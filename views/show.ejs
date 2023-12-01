@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Reptile</title>
 </head>
 <body>
-    <h1>show ROUTE</h1>
+  <ul>
+    <% if (reptile) { %>
+      <li>
+        <h3><%= reptile.Name %></h3>
+        <p>Hardiness: <%= reptile.Hardiness %></p>
+        <p>Tameability: <%= reptile.Tameability %></p>
+        <p>Habitat: <%= reptile.Habitat %></p>
+        <p>Diet: <%= reptile.Diet %></p>
+      </li>
+    <% } else { %>
+      <li>Reptile not found</li>
+    <% } %>
+  </ul>
+   <!-- Back to Index button -->
+   <a href="/reptiles">Back to Index</a>
 </body>
 </html>
