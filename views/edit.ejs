@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Reptile</title>
+  <link rel="stylesheet" href="/styles.css"> 
+
 </head>
+<header>  <h1>Edit Reptile</h1> </header>
 <body>
-  <h1>Edit Reptile</h1>
 
   <form action="/reptiles/<%= reptile._id %>?_method=PUT" method="POST">
     <input type="hidden" name="_method" value="PUT">
