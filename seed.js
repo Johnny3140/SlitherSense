@@ -27,12 +27,48 @@ db.once('open', async () => {
         Name: 'Bearded Dragon',
         Hardiness: 7.5,
         Tameability: 10,
-        Habitat: 'Desert',
+        Habitat: 'Arid/Desert',
         Diet: 'Insects and greens',
-        Image: 'projects/SlitherSense/SlitherSense/public/img/beginners-guide-keeping-bearded-dragon.jpg',
-      },
-      // Add more reptile data if needed
-    ];
+        Image: '/img/beginners-guide-keeping-bearded-dragon.jpg',      
+    },
+        {   
+          Name: "Crested Gecko",
+          Hardiness: 7.5,
+          Tameability: 10,
+          Habitat: "Tropical",
+          Diet: ' Fruits and Insects',
+          Image: '/img/depositphotos_39933213-stock-photo-portrait-of-a-caledonian-crested.jpg',
+        },
+        {
+            Name: "Nile Monitor",
+            Hardiness: 10,
+            Tameability: 1,
+            Habitat: "GrassLands, Swamps,Rivers, anywhere with a large body of water and available food",
+            Diet:" anything from insects to small mammals or eggs",
+            Image:"/img/Nile_monitor_(Varanus_niloticus)_2.jpg",
+        },
+        {
+            Name: "leopard Gecko",
+            Hardiness: 8,
+            Tameability:10,
+            Diet: "insects",
+            Image:"/img/NVA_-_MASTER_-_BLOG_-_EXOTIC_-_LEOPARD_GECKO.webp",
+        },
+        {
+            Name: "Central American Boa",
+            Hardiness: 7,
+            Tameability: 8,
+            Diet:"Small to Large Rodents in Captivity, in the wild it varies more",
+            Image:"/img/Boa_imperator,_Central_American_Boa_Constrictor_Tamaulipas.jpg",
+        },
+        {
+            Name: "Ball Pyhton",
+            Hardiness: 6.5,
+            Tameability: 10,
+            Diet:" Small to medium rodents",
+            Image:"/img/how-big-do-ball-pythons-get.jpg"
+        },
+     ];
 
     const insertedData = await Reptile.insertMany(reptilesData);
 
