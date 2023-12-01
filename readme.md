@@ -1,6 +1,6 @@
 # SlitherSense 
 #### A FullStack app for reptile care sheets. 
-<img src="/public/img/Screenshot 2023-12-01 at 6.33.58 PM.png" alt="Application home page>
+<img src="/img/Screenshot 2023-12-01 at 6.33.58 PM.png" alt="Application home page>
 
 ## Description 
 SlitherSense is a fullstack web application that is meant to help reptile owners have a easy place to find the important details related to their individual pets needs and requirements to truly thrive in captivity.
