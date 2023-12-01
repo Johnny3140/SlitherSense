@@ -1,5 +1,6 @@
 # SlitherSense 
 #### A FullStack app for reptile care sheets. 
+* Finished Application
 <img src="/public/img/Screenshot 2023-12-01 at 6.33.58 PM.png" alt="Application home page>
 
 ## Description 
