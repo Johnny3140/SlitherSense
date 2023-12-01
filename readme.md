@@ -21,7 +21,7 @@ SlitherSense is a fullstack web application that is meant to help reptile owners
 
 ## WireFrame IMG
 * original WireFrame
-<img src="" alt="">
+<img src="/img/image0.jpeg" alt="Original Sketch">
 
 ## GitHub Repo Link
 <a href="">GitHub Repository</a>
@@ -29,8 +29,5 @@ SlitherSense is a fullstack web application that is meant to help reptile owners
 ## Deployed Page
 <a href="">Deployed Page</a>
 
-
-## Progress Photos 
-
-
 ## Work Cited: 
+N/A
