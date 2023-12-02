@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const Reptile = require('../models/reptiles');
 
-
+app.get('/', (req, res) => {
+    res.render('index.ejs'); 
+  });
 // INDEX ROUTE
 app.get('/reptiles', async (req, res) => {
   try {
