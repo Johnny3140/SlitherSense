@@ -34,7 +34,7 @@ app.use(express.static('public'));
 
 // ROUTES (Controllers)
 const reptilesController = require('./controllers/reptilesController');
-app.use(reptilesController);
+app.use('/', reptilesController);
 
 
 // Listening Port
