@@ -35,7 +35,11 @@ app.use(express.static('public'));
 const reptilesController = require('./controllers/reptilesController');
 app.use(reptilesController);
 
-
+//LANDING ROUTE FOR RENDER
+router.get("/",(req,res)=>{
+  res.render('index.ejs',
+  )
+})
 
 // Listening Port
 app.listen(PORT, () => {
