@@ -2,14 +2,19 @@ const express = require('express');
 const app = express();
 const Reptile = require('../models/reptiles');
 
-app.get('/', (req, res) => {
-    res.render('index.ejs',{Reptiles}); 
-  });
+app.get('/', async (req, res) => {
+  try {
+    const reptiles = await Reptile.find({}, 'Name');
+    res.render('index', { reptiles }); 
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+});
 // INDEX ROUTE
 app.get('/reptiles', async (req, res) => {
   try {
     const reptiles = await Reptile.find({}, 'Name');
-    res.render('index', { Reptiles }); 
+    res.render('index', { reptiles }); 
   } catch (err) {
     res.status(500).send(err.message);
   }
