@@ -9,11 +9,12 @@ app.get('/', (req, res) => {
 app.get('/reptiles', async (req, res) => {
   try {
     const reptiles = await Reptile.find({}, 'Name');
-    res.render('index', { reptiles }); 
+    res.render('index', { Reptiles }); 
   } catch (err) {
     res.status(500).send(err.message);
   }
 });
+
 
 // NEW ROUTE
 app.get('/reptiles/new', (req, res) => {
