@@ -1,10 +1,9 @@
 const express = require('express');
-const router = express.Router();
+const app = express();
 const Reptile = require('../models/reptiles');
 
-
 // INDEX ROUTE
-router.get('/reptiles', async (req, res) => {
+app.get('/reptiles', async (req, res) => {
   try {
     const reptiles = await Reptile.find({}, 'Name');
     res.render('index', { reptiles });
@@ -14,12 +13,12 @@ router.get('/reptiles', async (req, res) => {
 });
 
 // NEW ROUTE
-router.get('/reptiles/new', (req, res) => {
+app.get('/reptiles/new', (req, res) => {
   res.render('new');
 });
 
 // DELETE ROUTE
-router.delete('/reptiles/:id', async (req, res) => {
+app.delete('/reptiles/:id', async (req, res) => {
   try {
     await Reptile.findByIdAndDelete(req.params.id);
     res.redirect('/reptiles');
@@ -29,7 +28,7 @@ router.delete('/reptiles/:id', async (req, res) => {
 });
 
 // UPDATE ROUTE
-router.put('/reptiles/:id', async (req, res) => {
+app.put('/reptiles/:id', async (req, res) => {
   try {
     const { Name, Hardiness, Tameability, Habitat, Diet, Image } = req.body;
     await Reptile.findByIdAndUpdate(req.params.id, { Name, Hardiness, Tameability, Habitat, Diet, Image });
@@ -40,7 +39,7 @@ router.put('/reptiles/:id', async (req, res) => {
 });
 
 // CREATE ROUTE
-router.post('/reptiles', async (req, res) => {
+app.post('/reptiles', async (req, res) => {
   try {
     const { Name, Hardiness, Tameability, Habitat, Diet } = req.body;
     const newReptile = new Reptile({ Name, Hardiness, Tameability, Habitat, Diet });
@@ -52,7 +51,7 @@ router.post('/reptiles', async (req, res) => {
 });
 
 // EDIT ROUTE
-router.get('/reptiles/:id/edit', async (req, res) => {
+app.get('/reptiles/:id/edit', async (req, res) => {
   try {
     const reptile = await Reptile.findById(req.params.id);
     res.render('edit', { reptile });
@@ -62,7 +61,7 @@ router.get('/reptiles/:id/edit', async (req, res) => {
 });
 
 // SHOW ROUTE
-router.get('/reptiles/:id', async (req, res) => {
+app.get('/reptiles/:id', async (req, res) => {
   try {
     const reptile = await Reptile.findById(req.params.id);
     if (!reptile) {
@@ -74,4 +73,4 @@ router.get('/reptiles/:id', async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = app;
