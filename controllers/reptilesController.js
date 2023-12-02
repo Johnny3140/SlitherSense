@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 app.get('/reptiles', async (req, res) => {
   try {
     const reptiles = await Reptile.find({}, 'Name');
-    res.render('index', { reptiles });
+    res.render('index', { reptiles }); 
   } catch (err) {
     res.status(500).send(err.message);
   }
