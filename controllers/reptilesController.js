@@ -3,7 +3,7 @@ const router = express.Router();
 const Reptile = require('../models/reptiles');
 
 //LANDING ROUTE FOR RENDER
-app.get("/",(req,res)=>{
+router.get("/",(req,res)=>{
     res.render('index.ejs',
     )
   })
