@@ -36,7 +36,7 @@ const reptilesController = require('./controllers/reptilesController');
 app.use(reptilesController);
 
 //LANDING ROUTE FOR RENDER
-router.get("/",(req,res)=>{
+app.get("/",(req,res)=>{
   res.render('index.ejs',
   )
 })
