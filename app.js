@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express ();
 const PORT = 3000;
-const Reptile = require('/Users/Johnny/sei-821/projects/SlitherSense/SlitherSense/models/reptiles.js');
+const Reptile = require('./models/reptiles');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
