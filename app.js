@@ -1,4 +1,5 @@
 //DEPENDENCIES 
+require("dotenv").config();
 const express = require('express');
 const app = express ();
 const PORT = 3000;
@@ -6,7 +7,6 @@ const Reptile = require('./models/reptiles');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-
 // Mongoose connection
 mongoose.connect('mongodb://127.0.0.1:27017/reptiles', {
   useNewUrlParser: true,
